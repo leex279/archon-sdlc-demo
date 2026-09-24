@@ -1,0 +1,13 @@
+{
+  "name": "archon-sdlc-demo",
+  "version": "0.1.0",
+  "description": "Turn a list of chapter start times into YouTube chapter timestamps.",
+  "type": "module",
+  "bin": { "chapters": "src/cli.ts" },
+  "scripts": {
+    "test": "node --experimental-strip-types --test \"test/**/*.test.ts\"",
+    "chapters": "node --experimental-strip-types src/cli.ts"
+  },
+  "engines": { "node": ">=22.6" },
+  "license": "MIT"
+}
