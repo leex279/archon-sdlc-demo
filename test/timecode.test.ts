@@ -13,6 +13,7 @@ test("formats minutes", () => {
 });
 
 test("formats hours", () => {
+  assert.equal(formatTimecode(3600), "1:00:00");
   assert.equal(formatTimecode(3725), "1:02:05");
 });
 
