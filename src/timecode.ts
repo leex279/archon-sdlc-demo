@@ -9,7 +9,7 @@ export function formatTimecode(totalSeconds: number): string {
   const pad = (n: number) => String(n).padStart(2, "0");
   const seconds = totalSeconds % 60;
 
-  if (totalSeconds > 3600) {
+  if (totalSeconds >= 3600) {
     const hours = Math.floor(totalSeconds / 3600);
     const minutes = Math.floor((totalSeconds % 3600) / 60);
     return `${hours}:${pad(minutes)}:${pad(seconds)}`;
