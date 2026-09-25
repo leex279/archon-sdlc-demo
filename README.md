@@ -21,3 +21,12 @@ npm test
 
 This repository is the demo target for a DIY Smart Code video about Archon's
 SDLC workflows.
+
+## Workflows shown in the video
+
+- **Run 1 — `archon-ship`** (ships with Archon 0.10.x, the maintained SDLC pack)
+  took issue #1 to pull request #2.
+- **Run 2 — `hyperframes-video`**, a custom workflow for producing videos. A
+  reference copy lives in
+  [`.archon/workflows/video-production/hyperframes-video/`](.archon/workflows/video-production/hyperframes-video/).
+

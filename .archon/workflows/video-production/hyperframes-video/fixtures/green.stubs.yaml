@@ -1,0 +1,30 @@
+# Dry-run fixture: the green path. Fully stubbed — proves DAG wiring, with:
+# bindings, loop_group bodies and the terminal verdict node without executing
+# anything. Body-node stubs are keyed by body id.
+plan-video:
+  ready: true
+  script_path: videos/demo-video/script.txt
+  kinetic_plan_path: videos/demo-video/kinetic-visual-plan.md
+  summary: "stub: planning set complete"
+preflight: '{"green":true,"slug":"demo-video","problems":[],"summary":"stub: preflight green"}'
+approve-plan:
+  decision: approve
+  text: ""
+narration: '{"narration_sha256":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","origin":"generated this run","summary":"stub"}'
+produce-video:
+  complete: true
+  summary: "stub: composition built"
+render-draft: '{"complete":true,"narration_sha256":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","render_path":"out/demo-video.mp4","summary":"stub"}'
+contact-sheet: '{"sheets":["/fixture/qa/contact-sheet-demo-video-full.jpg"],"frames":[],"duration":120.0}'
+validate-video: '{"green":true,"narration_sha256":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","receipt_path":"/fixture/validation-receipt.json","failed_gates":[],"summary":"stub"}'
+review-video:
+  ready: true
+  receipt_path: /fixture/independent-review-receipt.json
+  blocking_findings: []
+  summary: "stub: no blocking findings"
+final-render: '{"complete":true,"narration_sha256":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","render_path":"out/demo-video.mp4","summary":"stub"}'
+verify-and-report: '{"succeeded":true,"mp4_path":"out/demo-video.mp4","validation_receipt":"/fixture/validation-receipt.json","review_receipt":"/fixture/independent-review-receipt.json","contact_sheets":["/fixture/qa/contact-sheet-demo-video-full.jpg"],"summary":"stub"}'
+fixture:
+  expect: completed
+  inputs:
+    slug: demo-video

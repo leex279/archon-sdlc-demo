@@ -1,0 +1,14 @@
+# Dry-run fixture: the preflight guard seen RED for real (--exec-code).
+# A path-like slug must be refused by the script itself before any file is
+# read. Only preflight executes; the AI node before it is stubbed.
+plan-video:
+  ready: true
+  script_path: videos/x/script.txt
+  kinetic_plan_path: videos/x/kinetic-visual-plan.md
+  summary: "stub"
+fixture:
+  expect: failed
+  fail-node: [planning, preflight]
+  inputs:
+    slug: "../etc"
+exec-code: true
